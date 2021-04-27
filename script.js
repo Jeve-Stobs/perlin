@@ -4,7 +4,8 @@ var particles_c = [];
 var nums =200;
 var noiseScale = 800;
 
-function setup(){
+function setup(){	
+	smooth();
 	createCanvas(windowWidth, windowHeight);
 	background(21, 8, 50);
 	pixelDensity(5.9);
