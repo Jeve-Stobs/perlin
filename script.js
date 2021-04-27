@@ -7,13 +7,16 @@ var noiseScale = 800;
 function setup(){
 	createCanvas(windowWidth, windowHeight);
 	background(21, 8, 50);
+	pixelDensity(5.9);
 	for(var i = 0; i < nums; i++){
 		particles_a[i] = new Particle(random(0, width),random(0,height));
 		particles_b[i] = new Particle(random(0, width),random(0,height));
 		particles_c[i] = new Particle(random(0, width),random(0,height));
 	}
 }
-
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 function draw(){
 	noStroke();
 	smooth();
